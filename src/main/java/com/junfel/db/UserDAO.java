@@ -1,18 +1,20 @@
-package org.appname.forex.db;
+package com.junfel.db;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class UserDao {
+public class UserDAO {
+
     public void getUsers() {
-        System.out.println("Connecting to database...");
 
         String SQLStatement = "select * from users";
 
         try (Connection con = MyJDBC.getConnection();
              Statement st = con.createStatement();
              ResultSet rs = st.executeQuery(SQLStatement)) {
+
+            System.out.println("Getting Users to database...");
 
             while (rs.next()) {
                 System.out.println(
