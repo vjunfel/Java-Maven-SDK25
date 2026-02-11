@@ -30,8 +30,8 @@ public class JavaIO {
         }
 
         // Custom utility class Writer - Option 2
-        Writer.write(filePath, textToWrite);
-        Writer.write(filePath, textToWrite, true);
+        FWriter.write(filePath, textToWrite);
+        FWriter.write(filePath, textToWrite, true);
 
 
         // ***** Reading file using FileReader *****
@@ -62,17 +62,24 @@ public class JavaIO {
 
         // Custom utility class Reader - Option 2
         System.out.println("\n--- Custom FileReader ---");
-        Reader.read(fileToRead);
+        FReader.read(fileToRead);
 
 
         // ***** Writing file using BufferedWriter *****
-        String fileType = "BFwriter.txt";
-        String pathToSave = String.format("D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\%s", fileType);
-        String text2Write = "Write this using BufferedWriter";
-        String text2Write2 = "This is another line of text";
+        String BFfileToWrite = "BFWriter.txt";
+        String pathToSave = String.format("D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\%s", BFfileToWrite);
+        String BFtextToWrite = "Write this using BufferedWriter";
+        String BFtextToWrite2 = "This is another line of text";
 
-        BFWriter.write(pathToSave, text2Write, false);
-        BFWriter.write(pathToSave, text2Write2, true);
+        BFWriter.write(pathToSave, BFtextToWrite, false);
+        BFWriter.write(pathToSave, BFtextToWrite2, true);
+
+
+        // ***** Reading file using BufferedReader *****
+        String BFfileToRead = "BFReader.txt";
+        String BFfilePathToRead = String.format("D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\%s", BFfileToRead);
+
+        BFReader.read(BFfilePathToRead);
 
     }
 }
