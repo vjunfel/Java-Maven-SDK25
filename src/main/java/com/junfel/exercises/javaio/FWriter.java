@@ -3,7 +3,7 @@ package com.junfel.exercises.javaio;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Writer {
+public class FWriter {
 
     // #Method Overloading
     // Method 1 - (filePath, TextToWrite)
