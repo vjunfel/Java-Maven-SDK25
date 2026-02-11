@@ -64,5 +64,15 @@ public class JavaIO {
         System.out.println("\n--- Custom FileReader ---");
         Reader.read(fileToRead);
 
+
+        // ***** Writing file using BufferedWriter *****
+        String fileType = "BFwriter.txt";
+        String pathToSave = String.format("D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\%s", fileType);
+        String text2Write = "Write this using BufferedWriter";
+        String text2Write2 = "This is another line of text";
+
+        BFWriter.write(pathToSave, text2Write, false);
+        BFWriter.write(pathToSave, text2Write2, true);
+
     }
 }

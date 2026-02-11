@@ -1,0 +1,2 @@
+Write this using BufferedWriter
+This is another line of text
