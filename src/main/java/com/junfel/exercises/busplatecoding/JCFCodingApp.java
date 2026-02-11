@@ -102,7 +102,6 @@ public class JCFCodingApp {
         System.out.println("Friday Coding: " +  fridayCount);
 
         scanner.close();
-
     }
 
     static void displayAll() {
@@ -112,9 +111,8 @@ public class JCFCodingApp {
         }
 
         System.out.println("\n--- TUESDAY (LinkedList | Iterator) ---");
-        Iterator<BusDetails> tIt = tuesdayCoding.iterator();
-        while (tIt.hasNext()) {
-            System.out.println(tIt.next());
+        for (BusDetails busDetails : tuesdayCoding) {
+            System.out.println(busDetails);
         }
 
         System.out.println("\n--- WEDNESDAY (Vector | for-each) ---");
@@ -123,9 +121,8 @@ public class JCFCodingApp {
         }
 
         System.out.println("\n--- THURSDAY (TreeSet | Iterator) ---");
-        Iterator<BusDetails> thIt = thursdayCoding.iterator();
-        while (thIt.hasNext()) {
-            System.out.println(thIt.next());
+        for (BusDetails busDetails : thursdayCoding) {
+            System.out.println(busDetails);
         }
 
         System.out.println("\n--- FRIDAY (ArrayDeque | for-each) ---");
