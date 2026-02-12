@@ -12,8 +12,8 @@ public class JavaNIO {
         Path path = Path.of(filePath);
 
         Files.writeString(path, textToWrite,
-                StandardOpenOption.CREATE,
-                StandardOpenOption.APPEND
+                StandardOpenOption.CREATE
+//                StandardOpenOption.APPEND
         );
     }
 
