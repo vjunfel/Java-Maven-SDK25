@@ -81,5 +81,16 @@ public class JavaIO {
 
         BFReader.read(BFfilePathToRead);
 
+
+        // ***** Writing and Reading file using Java NIO *****
+        String NIOFilePath = "D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\JavaNIO.txt";
+        String NIOTextToWrite = "\nWrite this using NIO.";
+
+        // Writing File with Java NIO
+        JavaNIO.write(NIOFilePath, NIOTextToWrite);
+
+        // Reading File with Java NIO
+        JavaNIO.read(NIOFilePath);
+
     }
 }
