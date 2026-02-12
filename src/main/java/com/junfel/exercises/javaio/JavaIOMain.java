@@ -1,11 +1,9 @@
 package com.junfel.exercises.javaio;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
-public class JavaIO {
-    static void main() throws IOException {
+public class JavaIOMain {
+    public static void main() throws IOException {
 
         String fileName = "write.csv";
         String filePath = String.format("D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\%s", fileName);
@@ -80,6 +78,24 @@ public class JavaIO {
         String BFfilePathToRead = String.format("D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\%s", BFfileToRead);
 
         BFReader.read(BFfilePathToRead);
+
+
+        // ***** Writing and Reading file using Java NIO *****
+        String NIOFilePath = "D:\\Accenture\\projects\\Uno-Java-Maven-JDK25\\src\\main\\resources\\JavaNIO.txt";
+        String NIOTextToWrite = "\nWrite this using NIO.";
+
+        // Writing File with Java NIO
+        JavaNIO.write(NIOFilePath, NIOTextToWrite);
+
+        // Reading File with Java NIO
+        JavaNIO.read(NIOFilePath);
+
+
+        // ***** Reading file on the internet via URL *****
+        System.out.println("\nReading file from URL ------------------------------------------");
+
+        String fileURL = "https://raw.githubusercontent.com/vjunfel/Java-Maven-SDK25/refs/heads/main/pom.xml";
+        ReadURL.read(fileURL);
 
     }
 }
